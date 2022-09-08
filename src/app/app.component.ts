@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUser } from './user';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'contentprojecton';
+  title = 'Content Projection Demo ';
+  rememberMe : boolean = false; 
+  login(user:IUser){
+    
+    console.log('login',user, this.rememberMe);
+  }
+
+  signUp(user:IUser){
+    console.log('singn up',user);
+  }
+
+  doRemember(value: boolean){
+     this.rememberMe = value; 
+  }
 }
